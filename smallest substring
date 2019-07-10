@@ -1,0 +1,13 @@
+def substring(string):
+    m = ''
+    Length = len(string)
+    for i in range(0,Length+1):
+        for j in range(1,Length+1):
+            new = string[i:j]
+            if len(new) == len(set(new)):
+                if len(m) < len(new):
+                    m = new
+    return len(m)
+
+
+print(substring(input()))
